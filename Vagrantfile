@@ -4,7 +4,7 @@ boxes = [
     {
         :name => "manager",
         :eth1 => "192.168.205.10",
-        :mem => "1024",
+        :mem => "2048",
         :cpu => "1"
     },
     {
@@ -43,5 +43,7 @@ Vagrant.configure(2) do |config|
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"
     sudo apt update
     sudo apt install -y docker-ce git vim
+    sudo apt install docker-compose
+    sudo usermod -aG docker vagrant
   SHELL
 end
